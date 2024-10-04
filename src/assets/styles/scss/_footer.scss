@@ -1,0 +1,49 @@
+.footer-container{
+    border-bottom: 8px solid $secondary2-100;
+    background-color: $grayscale-1;
+    .footer{
+        max-width: 1136px;
+        margin: 0 auto;
+        @include font(IranSansX,14px,500);
+        .footer__logo{
+            svg{
+                width: 87px;
+                height: 37px;
+            }
+            p{
+                margin-top: 24px;
+                line-height: 28px;
+            }
+        }
+        .footer__links{
+            max-width: 400px;
+            div{
+                width: 150px;
+            }
+            h3{
+                @include font(IranSansX,16px,700);
+                font-weight: 700;
+                line-height: 2;
+                margin-bottom: 20px;
+            }
+        }
+        .footer__copyright{
+            @include font(IranSansX,14px,500);
+            font-weight: 700;
+            line-height: 2;
+        }
+    }
+}
+@media (min-width:992px) {
+    .footer-container{
+        .row{
+            .footer__links{
+                max-width: 100%;
+                div{
+                    width: 176px;
+                }
+            }
+        }
+
+    }
+}

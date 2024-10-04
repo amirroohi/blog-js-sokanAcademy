@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="website for learning prgrammming" />
+    <meta
+      name="keywords"
+      content="programming courses, learning codes, python, javascript, html"
+    />
+    <meta name="author" content="amir roohi" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/icons/Logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/styles/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>sokan academy</title>
+  </head>
+  <body>
+    <header class="header container-fluid position-sticky top-0 z-1">
+      <nav
+        class="navbar container-lg d-flex justify-content-between align-items-center px-xl-3"
+      >
+        <div class="nav__menu d-md-none">
+          <button
+            class="btn hamburger-menu d-flex justify-content-between align-items-center rounded-3"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <svg class="icon">
+              <use xlink:href="./src/assets/icons/sprite.svg#menu-1"></use>
+            </svg>
+          </button>
+          <div
+            class="offcanvas offcanvas-end col"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header w-100 d-flex justify-content-between">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+              <div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </div>
+            <div class="offcanvas-body">
+              <div class="nav__list--offcanvas">
+                <ul
+                  class="nav d-flex flex-column justify-content-between align-items-start"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">دوره‌های آموزشی</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">وبلاگ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">مجموعه‌ها</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">رادیوفول‌استک</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">فن‌واژه</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav__logo">
+          <svg class="icon">
+            <use xlink:href="./src/assets/icons/sprite.svg#Logo"></use>
+          </svg>
+        </div>
+        <div class="nav__list d-none d-md-block">
+          <ul
+            class="nav d-flex justify-content-between align-items-center p-0 m-0"
+          >
+            <li class="nav-item">
+              <a class="nav-link" href="#">دوره‌های آموزشی</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">وبلاگ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">مجموعه‌ها</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">رادیوفول‌استک</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">فن‌واژه</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="nav__login d-flex justify-content-center align-items-center rounded-3 border-0"
+        >
+          <svg class="icon">
+            <use xlink:href="./src/assets/icons/sprite.svg#login"></use>
+          </svg>
+          <p class="login-desktop d-none d-md-block m-0 me-2">ورود | ثبت‌نام</p>
+        </button>
+      </nav>
+    </header>
+    <section class="breadcrumb-section container-lg g-0">
+      <nav>
+        <ol class="breadcrumb__items d-flex">
+          <li class="breadcrumb__item"><a href="#">خانه</a></li>
+          <li class="breadcrumb__item"><a href="#">وبلاگ</a></li>
+        </ol>
+      </nav>
+    </section>
+    <section class="search-container container-lg">
+      <div
+        class="search-section border-bottom border-2 row justify-content-center"
+      >
+        <header
+          class="search-header d-flex justify-content-center align-items-baseline"
+        >
+          وبلاگ، مقاله‌های تخصصی
+        </header>
+        <div class="search-form p-0">
+          <form class="d-flex">
+            <input
+              class="form-control rounded-3 border-0"
+              type="search"
+              placeholder="در بین مقاله‌های تخصصی جستجو کن..."
+              aria-label="Search"
+            />
+            <button class="btn search-btn rounded-3" type="submit"></button>
+          </form>
+          <div class="form-category d-flex flex-column flex-sm-row gap-3 mt-4">
+            <div class="dropdown w-100">
+              <a
+                class="btn btn-secondary dropdown-toggle border-0 rounded-3 w-100 d-flex align-items-center"
+                href="#"
+                role="button"
+                id="categoryMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-offset="0,20"
+              >
+                <span class="dropdown-toggle__remove"></span>
+                <span
+                  class="d-inline-block dropdown-toggle__name"
+                  data-reset="دسته‌بندی"
+                  >دسته‌بندی</span
+                >
+              </a>
+              <div class="dropdown-menu shadow-lg w-100">
+                <ul
+                  class="dropdown-menu__list category-list"
+                  aria-labelledby="categoryMenuLink"
+                >
+                  <li>
+                    <a class="dropdown-item" data-category="18" href="#"
+                      >فرانت اند</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-category="19" href="#"
+                      >بک اند</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-category="1" href="#"
+                      >برنامه‌نویسی</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown w-100">
+              <a
+                class="btn btn-secondary dropdown-toggle border-0 rounded-3 w-100 d-flex align-items-center"
+                href="#"
+                role="button"
+                id="categoryMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-offset="0,20"
+              >
+                <span class="dropdown-toggle__remove"></span>
+                <span
+                  class="d-inline-block dropdown-toggle__name"
+                  data-reset="نویسنده"
+                  >نویسنده</span
+                >
+              </a>
+              <div class="dropdown-menu shadow-lg w-100">
+                <ul
+                  class="dropdown-menu__list author-list"
+                  aria-labelledby="dropdownMenuLink"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      data-author="sajadranjbar1911"
+                      href="#"
+                      >سجاد رنجبر</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-author="mjy1613" href="#"
+                      >مهدی یحیائی</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-author="hrmadani" href="#"
+                      >حمیدرضا معدنی</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown w-100">
+              <a
+                class="btn btn-secondary dropdown-toggle border-0 rounded-3 w-100 d-flex align-items-center"
+                href="#"
+                role="button"
+                id="categoryMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-offset="0,20"
+              >
+                <span class="dropdown-toggle__remove"></span>
+                <span
+                  class="d-inline-block dropdown-toggle__name"
+                  data-reset="مرتب‌سازی"
+                  >مرتب‌سازی</span
+                >
+              </a>
+              <div class="dropdown-menu shadow-lg w-100">
+                <ul
+                  class="dropdown-menu__list sort-list"
+                  aria-labelledby="dropdownMenuLink"
+                >
+                  <li>
+                    <a class="dropdown-item" data-sort="latest" href="#"
+                      >جدیدترین</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-sort="oldest" href="#"
+                      >قدیمی‌ترین</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-sort="most_visited" href="#"
+                      >محبوب‌ترین</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-lg d-flex justify-content-center">
+      <div
+        class="cards-list row row-cols-1 row-cols-lg-3 gy-4 column-gap-2"
+      ></div>
+    </section>
+    <section
+      class="banner container-lg d-flex flex-column align-items-center justify-content-center py-4 px-lg-0 duration-200 mb-5"
+    >
+      <div class="slideshow-container row w-100"></div>
+      <div
+        class="navigation-slide d-flex justify-content-center align-items-center mt-3"
+      >
+        <a class="prev ms-3"></a>
+        <div class="dots d-flex"></div>
+        <a class="next me-3"></a>
+      </div>
+    </section>
+    <footer class="container-lg footer-container mw-100">
+      <div class="footer row justify-content-between py-5">
+        <div class="footer__logo col-12 col-lg-6 g-0">
+          <svg class="icon">
+            <use xlink:href="./src/assets/icons/sprite.svg#Logo"></use>
+          </svg>
+          <p>
+            ما در سکان‌آکادمی معتقدیم همه‌ی انسان‌ها حق دارند، به آموزش باکیفیت
+            و کم‌هزینه دسترسی آسان داشته باشند و همه‌ی افراد می‌توانند با آموزش
+            درست، زندگی فردی و اجتماعی خود را بهتر کنند. با توجه به تخصص تیم ما
+            در حوزه‌ی IT و نیاز روزافزون بازار کار به متخصصان این حوزه، تولید و
+            عرضه‌ی محتوای مهارت‌محور و تخصصی را در حوزه‌ی IT جدی‌تر دنبال کردیم.
+            در این راه از ابتدای انتخاب مسیر متناسب با توانایی و امکانات دانشجو
+            تا یادگیری، تمرین، کسب مهارت تخصصی و عمومی، و در نهایت معرفی به
+            بازار کار همراه او هستیم...
+          </p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="footer__links row justify-content-lg-center row-cols-2">
+            <div class="service-link col-6 gap-4 p-0">
+              <h3>خدمات سکان آکادمی</h3>
+              <p><a href="">دوره‌های آموزشی</a></p>
+              <p><a href="">وبلاگ</a></p>
+              <p><a href="">سکان پلاس</a></p>
+              <p><a href="">رادیوفول‌استک</a></p>
+              <p><a href="">فن‌واژه</a></p>
+            </div>
+            <div class="access-link col-6 gap-4 p-0">
+              <h3>دسترسی سریع</h3>
+              <p><a href="">درباره ما</a></p>
+              <p><a href="">تماس با ما</a></p>
+              <p><a href="">همکاری با ما</a></p>
+              <p><a href="">شرایط و قوانین</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright text-center mt-4">
+          کلیه حقوق مادی و معنوی این وب‌سایت متعلق به سکان آکادمی می‌باشد.
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./src/assets/js/main.js"></script>
+  </body>
+</html>

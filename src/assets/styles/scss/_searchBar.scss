@@ -1,0 +1,116 @@
+section{
+    .search-section{
+        padding: 40px 0px;
+        margin: 0px;
+        border-color: $grayscale-2;
+        @include font(IranSansX,22px,900);
+        .search-header{
+            @include font(IranYekanX,22px,900);
+            margin:0px 0px 28px;
+            line-height: 2;
+        }
+
+        .search-header::before{
+            @include headerLine();
+            margin-left: 8px;
+        }
+        .search-header::after{
+            @include headerLine();
+            margin-right: 8px;
+        }
+        .search-form{
+            max-width: 560px;
+            .form-control{
+                outline: none;
+                box-shadow: none;
+                background-color: $grayscale-1;
+                margin-left: 12px;
+            }
+            .form-control::placeholder{
+                color: $grayscale-6;
+                @include font(IranSansX,14px,500);
+                line-height: 2;
+            }
+            .search-btn{
+                background-color: $secondary2-100;
+                width: 44px;
+                height: 44px;
+                background-image: url(../../icons/search-normal.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .form-category{
+                @include font(IranSansX,12px,500);
+                .dropdown{
+                    .dropdown-toggle{
+                        @include font(IranSansX,14px,500);
+                        height: 44px;
+                        background-color: $grayscale-1;
+                        color: $grayscale-6;
+                        text-align: right;
+                        padding: 5px 10px;
+                        .dropdown-toggle__remove{
+                            display: none;
+                            width: 20px;
+                            height: 20px;
+                            background-image: url(../../icons/x.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            margin-left: 5px;
+                        }
+                    }
+                    .dropdown-toggle:focus{
+                        outline: $secondary2-100 solid 1px;
+                        box-shadow: none;
+                    }
+                    .dropdown-toggle:focus::after{
+                        rotate: 180deg;
+                    }
+                    .dropdown-toggle::after{
+                        content: url(../../icons/arrow-down.svg);
+                        border: 0;
+                        height: 20px;
+                        width: 20px;
+                        color: $grayscale-1;
+                        position: absolute;
+                        left: 10px;
+                        top: 11px;
+                    }
+                    .dropdown-menu{
+                        transition: none;
+                        padding: 5px 0;
+                        text-align: start;
+                        border-radius: 10px;
+                        max-height: 192px;
+                        .dropdown-menu__list{
+                            max-height: 178px;
+                            width: 100%;
+                            scrollbar-width: thin;
+                            scrollbar-gutter: stable;
+                            overflow-y: unset;
+                            padding-left: 0;
+                            margin-bottom: 0;
+                            li{
+                                .dropdown-item{
+                                    width: 100%;
+                                    line-height: 32px;
+                                }
+                                .dropdown-item:hover{
+                                    background-color: $grayscale-2;
+                                }
+                                .dropdown-item--reset{
+                                    font-size: 14px;
+                                    color: $grayscale-6;
+                                }
+                                .active{
+                                    background-color: $grayscale-2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

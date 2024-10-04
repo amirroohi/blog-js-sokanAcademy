@@ -1,0 +1,85 @@
+.cards-list{
+    padding: 20px 12px 80px;
+    .emptyContent{
+        @include font(IranSansX,20px,500);
+        width: fit-content;
+    }
+    .card{
+        height: 236px;
+        border: 2px solid $grayscale-2;
+        overflow: hidden;
+        @include for-phone-only {    
+            height: 210px;
+        }
+        @include for-desktop-up {    
+            width: 368px;
+        }
+        .card-body{
+            padding: 16px 18px 20px;
+            line-height: 2;
+            position: absolute;
+            bottom: -60%;
+            background-color: rgba($color: $grayscale-0, $alpha: 0.8);
+            @include font(IranSansX,18px,700);
+            .card-text{
+                display: inline-block;
+                color: $secondary2-100;
+                margin: 0;
+                overflow: hidden;
+                height: 4.5em;
+                p{
+                    // text truncate
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2   ;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                }
+            }
+            .course-creater{
+                @include font(IranSansX,14px,700);
+                @include for-phone-only {    
+                    margin: 4px 0 20px;
+                }
+                margin: 4px 0 46px;
+                .profile-creater{
+                    img{
+                        width: 21px;
+                        height: 21px;
+                    }
+                }
+                .name-creater{
+                    margin-right: 5px;
+                }
+            }
+            .course-details{
+                @include font(IranSansX,14px,500);
+                height: 40px;
+                .course-spec{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        p{
+                            margin: 0 8px 0 0;
+                            text-wrap: nowrap;
+                        }
+                    }
+                    .icon{
+                        height: 20px;
+                        width: 20px;
+                    }
+                    .bookmark{
+                        svg{
+                            height: 24px;
+                            width: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .card:hover{
+        .card-body{
+            bottom: 0;
+        }
+    }
+}

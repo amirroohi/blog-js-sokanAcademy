@@ -1,0 +1,41 @@
+.banner{
+  height: fit-content;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+  .slideshow-container{
+    position: relative;
+    flex-wrap: nowrap;
+    .slide{
+      position: relative;
+      height: fit-content;
+    }
+  }
+  .dots{
+    width: 70px;
+    justify-content: space-around;
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 3px;
+      background-color: $grayscale-3;
+      border-radius: 100%;
+      display: inline-block;
+    }
+    .active, .dot:hover {
+      background-color: $secondary2-100;
+    }
+  }
+  .prev,.next {
+    cursor: pointer;
+    background-image: url(../../icons/arrow-right-2.svg);
+    background-repeat: no-repeat;
+    width: 32px;
+    padding: 16px;
+    background-position: center;
+  }
+  .next{
+    background-image: url(../../icons/arrow-left-2.svg);
+    background-repeat: no-repeat;
+  }
+}

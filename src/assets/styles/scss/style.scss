@@ -1,0 +1,75 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../../node_modules/bootstrap/dist/css/bootstrap.css";
+// colors
+@import "variables";
+@import "font";
+
+
+
+// mixins
+@mixin font($fontFamily,$fontSize,$fontWeight){
+    font-family: $fontFamily;
+    font-size:$fontSize ;
+    font-weight: $fontWeight;
+}
+
+@mixin headerLine{
+    content: url(../../icons/Line.svg);
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    width: 16px;
+    height: 4px;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1000px) { @content; }
+  }
+
+// resets
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+body{
+    @include font(IranSansX,14px,700);
+    color: $secondary2-100;
+}
+
+a{
+    text-decoration: none;
+    color: $secondary2-100;
+}
+
+// ---------UI---------
+.container-lg{
+    max-width: 1146px;
+}
+
+// ----header----
+
+// navber
+@import "header";
+
+// breadcrumb
+@import "breadcrumb";
+
+// search-section
+@import "searchBar";
+
+// ---------body-------
+// cards
+@import "cards";
+
+// banner
+@import "banner";
+
+// ---------footer--------
+@import "footer";
+

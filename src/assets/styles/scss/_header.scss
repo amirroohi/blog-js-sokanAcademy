@@ -1,0 +1,112 @@
+.header{
+    backdrop-filter: blur(20px);
+     .navbar{
+        padding: 20px 0px;
+        .nav__menu{
+            overflow: hidden;
+            .hamburger-menu{
+                border: 1px solid $secondary2-100;
+                padding: 7.5px;
+                background-color: $grayscale-0;
+                outline: none;
+                .icon{
+                    width: 20px; 
+                    height: 20px;
+                }
+            }
+            .offcanvas{
+                display: none;
+                height: 100vh;
+                width: 280px;
+                .offcanvas-header{
+                    .btn-close{
+                        background-image: url(../../icons/x.svg)
+                    }
+                }
+                .offcanvas-body{
+                    .nav__list--offcanvas{
+                        .nav{
+                            .nav-item{
+                                width: 100%;
+                                .nav-link{
+                                    width: 100%;
+                                    @include font(IranSansX,16px,500);
+                                    padding: 5px;
+                                    margin: 5px;
+                                    line-height: 36px;
+                                    color: $secondary2-100;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .show{
+                display: flex !important;
+            }
+        }
+        .nav__logo{
+            .icon{
+                width: 87px; 
+                height: 37px;
+            }
+        }
+        .nav__list{
+            @include font(IranSansX,14px,500);
+            width: 476px;
+            .nav{
+                .nav-item{
+                    position: relative;
+                    .nav-link{
+                        color: $secondary2-100;
+                    }
+                    .nav-link:active{
+                        color: $secondary1-100;
+                    }
+                    .nav-link:hover{
+                        color: $secondary1-100;
+                    }
+                    .nav-link:hover::after{
+                        position: absolute;
+                        bottom: -20px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        background-color: $secondary1-100;
+                        width: 20%;
+                        border-radius: 10px;
+                        content: "";
+                        height: 2px;
+                        transition: all 0.5s;
+                    }
+                    .nav-link:focus{
+                        color:$secondary1-100 ;
+                    }
+                    .nav-link:focus::after{
+                        position: absolute;
+                        bottom: -20px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        background-color: $secondary1-100;
+                        width: 20%;
+                        border-radius: 10px;
+                        content: "";
+                        height: 2px;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+        .nav__login{
+            background-color: $secondary2-100;
+            padding: 7.5px;
+            color: $grayscale-0;
+            @include font(IranSansX,14px,500);
+            .icon{
+                width: 20px; 
+                height: 20px;
+            }
+        }
+    }
+}

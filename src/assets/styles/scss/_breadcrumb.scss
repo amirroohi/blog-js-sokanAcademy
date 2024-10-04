@@ -1,0 +1,35 @@
+// breadcrumb
+.breadcrumb-section{
+    .breadcrumb__items{
+        @include font(IranSansX,14px,500);
+        margin-bottom: 0;
+        line-height: 2;
+        width: 100%;
+        padding: 40px 16px 0px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        li+li::before {
+            position: relative;
+            top: 3px;
+            width: 16px;
+            height: 16px;
+            padding-left: 8px;
+            color: $grayscale-1;
+            content: url(../../icons/arrow-left.svg);
+          }
+        .breadcrumb__item{
+            padding-left: 8px;
+            a{
+                color: $secondary2-100;
+            }
+        }
+    }
+    .breadcrumb__item:last-child{
+        a{
+            color: $grayscale-5;
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+}
